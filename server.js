@@ -32,14 +32,14 @@ app.use("/api/admin", adminRouter);
 app.use("/api/news", newsRouter);
 
 // make new admin
-// const seedAdmin = async () => {
-//   await Admin.deleteMany({});
-//   const admin = new Admin({ username: "aimsCMS", password: "Aims@cms-786" });
-//   await admin.save();
-//   console.log("Admin created");
-//   process.exit();
-// };
-// seedAdmin();
+const seedAdmin = async () => {
+  await Admin.deleteMany({});
+  const admin = new Admin({ username: "aimsCMS", password: "Aims@cms-786" });
+  await admin.save();
+  console.log("Admin created");
+  process.exit();
+};
+seedAdmin();
 
 // connect to MongoDB
 mongoose
